@@ -1,15 +1,24 @@
 window.onload = function() {
     function insert_HTML(item_code){
 	var simple_URL = 'https://www.amazon.co.jp/dp/' + item_code + '/';
-	var line_element = document.getElementsByClassName('a-icon-share-line')[0].parentElement;
+	var title = document.getElementById('productTitle').innerText;
+	simple_URL = title + "\n" + simple_URL;
+	//var cart_element = document.getElementById('addToCart');
+	//var cart_element = document.getElementById('add-to-wishlist-button-submit').parentElement.parentElement.parentElement.parentElement;
+	var cart_element = document.getElementById('add-to-wishlist-button-group');
+	
+        var hr_element = document.createElement('hr');
+	hr_element.className = 'a-spacing-mini a-spacing-top-mini a-divider-normal';
 	var span_element = document.createElement('span');
 	span_element.classList.add('a-letter-space');
+	
 	var new_element = document.createElement('input');
 	new_element.type='button';
 	new_element.value='リンクをコピー';
 	new_element.id='link_button';
-	
-	line_element.after(span_element);
+
+	cart_element.after(hr_element);
+	hr_element.after(span_element);
 	span_element.after(new_element);
 	
 	document.getElementById('link_button').onclick = () => {
