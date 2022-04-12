@@ -3,8 +3,7 @@ window.onload = function() {
 	var simple_URL = 'https://www.amazon.co.jp/dp/' + item_code + '/';
 	var title = document.getElementById('productTitle').innerText;
 	simple_URL = title + "\n" + simple_URL;
-	//var cart_element = document.getElementById('addToCart');
-	//var cart_element = document.getElementById('add-to-wishlist-button-submit').parentElement.parentElement.parentElement.parentElement;
+
 	var cart_element = document.getElementById('add-to-wishlist-button-group');
 	
         var hr_element = document.createElement('hr');
