@@ -2,7 +2,8 @@ window.onload = function() {
     function insert_HTML(item_code){
 	var simple_URL = 'https://www.amazon.co.jp/dp/' + item_code + '/';
 	var title = document.getElementById('productTitle').innerText;
-	simple_URL = title + "\n" + simple_URL;
+        var price = document.getElementsByClassName('a-offscreen')[0].innerText;
+        simple_URL = title + "\n" + simple_URL + "\n" + price;
 
 	var cart_element = document.getElementById('add-to-wishlist-button-group');
 	
