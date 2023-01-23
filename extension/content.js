@@ -3,10 +3,12 @@ window.onload = function() {
 	var simple_URL = 'https://www.amazon.co.jp/dp/' + item_code + '/';
 	var title = document.getElementById('productTitle').innerText;
         var price = document.getElementsByClassName('a-offscreen')[0].innerText;
-        simple_URL = title + "\n" + simple_URL + "\n" + price;
+	simple_URL = title + "\n" + simple_URL + "\n" + price + "\n";
+	//var cart_element = document.getElementById('addToCart');
+	//var cart_element = document.getElementById('add-to-wishlist-button-submit').parentElement.parentElement.parentElement.parentElement;
 
-	var cart_element = document.getElementById('add-to-wishlist-button-group');
-	
+	//var cart_element = document.getElementById('add-to-wishlist-button-group');
+	var cart_element = document.getElementById("addToWishlist_feature_div");
         var hr_element = document.createElement('hr');
 	hr_element.className = 'a-spacing-mini a-spacing-top-mini a-divider-normal';
 	var span_element = document.createElement('span');
