@@ -1,7 +1,7 @@
 {
     "name": "Amazon URL simplifier",
     "description": "Amazon.co.jpの商品ページの各種シェアアイコンのそばに「リンクをコピー」ボタンを追加します。商品名やアフィリエイトコードなどを除去したシンプルなURLをコピーすることができます。",
-    "manifest_version":2,
+    "manifest_version":3,
     "version":"1.0.0",
     "content_scripts":[{
 	"matches": ["https://www.amazon.co.jp/*"],
